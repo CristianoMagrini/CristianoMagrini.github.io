@@ -1,6 +1,7 @@
 :root {
     --primarycolor: #26456c;
-    --backgroundcolor: #faa75a;
+    --secondarycolor: #e86219;
+    --backgroundcolor: #ffffff;
 }
 
 * {
@@ -17,6 +18,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 h1,
@@ -31,8 +38,8 @@ p {
 }
 
 h1 {
-    font-size: 6rem;
-    line-height: 104px;
+    font-size: 5rem;
+    line-height: 90px;
 }
 
 h2 {
@@ -50,27 +57,16 @@ h4 {
     line-height: 24px;
 }
 
+h5 {
+    font-size: 1rem;
+    line-height: 20px;
+}
+
 a,
 a:visited,
 a:focus {
     text-decoration: none;
     color: var(--primarycolor);
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    height: 80px;
-}
-
-nav .menu {
-    display: flex;
-    width: 40%;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    line-height: 32px;
 }
 
 .content {
@@ -83,7 +79,42 @@ nav .menu {
     justify-content: space-between;
 }
 
-.main-content {
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+nav a {
+    margin-left: 4rem;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--primarycolor);
+    height: 70px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons img {
+    height: 25px;
+    margin-right: 2rem;
+}
+
+.home-content {
     display: flex;
     position: relative;
     align-items: center;
@@ -96,25 +127,56 @@ nav .menu {
     object-fit: cover;
     display: block;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 5px solid var(--primarycolor);
     border-radius: 20px 20px 20px 20px;
 }
 
-.title{
+.home-title {
+    width: 100%;
     position: absolute;
     text-align: center;
-    color: white;
+    color: var(--backgroundcolor);
     font-size: 8rem;
 }
 
-.active {
-    font-weight: bold;
+.pages-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
+.pages-title {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.pages-title h1 {
+    margin-bottom: 2rem;
+}
+
+.pages-title h3 {
+    color: var(--secondarycolor);
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 0 5rem;
+}
+
+.works-grid> :nth-child(odd) {
+    margin-top: 5rem;
+}
+
+.works-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-color: var(--primarycolor);
 }
