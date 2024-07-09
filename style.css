@@ -84,12 +84,16 @@ nav {
     justify-content: flex-end;
     width: 100%;
     height: 80px;
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 1.25rem;
 }
 
 nav a {
     margin-left: 4rem;
+}
+
+nav a:hover {
+    transform: scale(1.05);
 }
 
 .active {
@@ -100,6 +104,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2rem;
     border-top: 3px solid var(--primarycolor);
     height: 70px;
 }
@@ -114,6 +119,10 @@ nav a {
     margin-right: 2rem;
 }
 
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
 .home-content {
     display: flex;
     position: relative;
@@ -123,13 +132,11 @@ nav a {
 
 .home-image {
     width: 100%;
-    height: 450px;
+    height: 465px;
     object-fit: cover;
     display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     border: 5px solid var(--primarycolor);
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
 }
 
 .home-title {
@@ -167,16 +174,38 @@ nav a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 0 5rem;
+    gap: 0 10rem;
 }
 
 .works-grid> :nth-child(odd) {
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 
-.works-item img {
+.works-box {
+    position: relative;
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 200px;
     background-color: var(--primarycolor);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.works-box:hover {
+    transform: scale(1.02);
+}
+
+.works-box h2 {
+    color: var(--backgroundcolor);
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.works-item p {
+    text-align: justify;
+    text-align-last: left;
 }
