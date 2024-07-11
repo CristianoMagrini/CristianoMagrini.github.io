@@ -273,6 +273,8 @@ nav a:hover {
     text-align-last: left;
 }
 
+/*Responsive*/
+
 @media (max-width: 1204px) {
     .content {
         padding-inline: 1.5rem;
