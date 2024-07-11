@@ -58,8 +58,8 @@ h4 {
 }
 
 h5 {
-    font-size: 1rem;
-    line-height: 20px;
+    font-size: 0.9rem;
+    line-height: 15px;
 }
 
 a,
@@ -85,7 +85,6 @@ nav {
     width: 100%;
     height: 80px;
     margin-top: 3rem;
-    font-size: 1.25rem;
 }
 
 nav a {
@@ -96,7 +95,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-.active {
+.active h4 {
     font-weight: bold;
 }
 
@@ -173,10 +172,9 @@ nav a:hover {
 .about-text {
     margin-top: 2rem;
     text-align: justify;
-    font-size: 1.1rem;
 }
 
-.skills-languages {
+.skills-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,10 +182,54 @@ nav a:hover {
     margin-top: 3rem;
 }
 
-.skills-languages img {
-    height: 120px;
-    object-fit: cover;
+.skills-icons img {
+    height: 100px;
     display: block;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+.skills-text {
+    margin-top: 3rem;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    border-bottom: 1px solid var(--primarycolor);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 0 10rem;
+    margin-top: 1rem;
+}
+
+.skills-box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: var(--primarycolor);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.skills-box:hover {
+    transform: scale(1.02);
+}
+
+.skills-box h2 {
+    color: var(--backgroundcolor);
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .works-grid {
@@ -224,10 +266,40 @@ nav a:hover {
     text-align: center;
     max-width: 90%;
     margin: 0 auto;
-    font-size: 2.5rem;
 }
 
 .works-item p {
     text-align: justify;
     text-align-last: left;
+}
+
+@media (max-width: 1204px) {
+    .content {
+        padding-inline: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        line-height: 24px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
 }
