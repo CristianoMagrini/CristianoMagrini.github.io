@@ -183,7 +183,7 @@ nav a:hover {
 }
 
 .skills-icons img {
-    height: 100px;
+    height: 80px;
     display: block;
 }
 
@@ -397,6 +397,10 @@ nav a:hover {
 }
 
 @media (max-width: 400px) {
+    .footer {
+        margin-top: 1rem;
+    }
+
     .social-icons img {
         height: 22px;
         margin-right: 1rem;
@@ -404,7 +408,7 @@ nav a:hover {
 
     nav {
         margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     nav a:not(:first-child) {
